@@ -1,0 +1,74 @@
+﻿@model UserAPI.Modeles.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Uti_Id" />
+            <div class="form-group">
+                <label asp-for="Uti_Nom" class="control-label"></label>
+                <input asp-for="Uti_Nom" class="form-control" />
+                <span asp-validation-for="Uti_Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Prenom" class="control-label"></label>
+                <input asp-for="Uti_Prenom" class="form-control" />
+                <span asp-validation-for="Uti_Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Adresse" class="control-label"></label>
+                <input asp-for="Uti_Adresse" class="form-control" />
+                <span asp-validation-for="Uti_Adresse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Ville" class="control-label"></label>
+                <input asp-for="Uti_Ville" class="form-control" />
+                <span asp-validation-for="Uti_Ville" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Cp" class="control-label"></label>
+                <input asp-for="Uti_Cp" class="form-control" />
+                <span asp-validation-for="Uti_Cp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Telephone" class="control-label"></label>
+                <input asp-for="Uti_Telephone" class="form-control" />
+                <span asp-validation-for="Uti_Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Email" class="control-label"></label>
+                <input asp-for="Uti_Email" class="form-control" />
+                <span asp-validation-for="Uti_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_Mdp" class="control-label"></label>
+                <input asp-for="Uti_Mdp" class="form-control" />
+                <span asp-validation-for="Uti_Mdp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uti_TypeUtil" class="control-label"></label>
+                <input asp-for="Uti_TypeUtil" class="form-control" />
+                <span asp-validation-for="Uti_TypeUtil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

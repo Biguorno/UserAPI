@@ -1,0 +1,83 @@
+﻿@model IEnumerable<UserAPI.Modeles.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Adresse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Ville)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Cp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_Mdp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uti_TypeUtil)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Ville)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Cp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_Mdp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uti_TypeUtil)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Uti_Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Uti_Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Uti_Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
